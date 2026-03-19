@@ -35,8 +35,4 @@ public class CustomOAuth2User implements OAuth2User {
         return oAuth2ResponseDto.getName();
     }
 
-    // 유저 아이디 커스텀 생성(프로바이더_고유아이디)
-    public String getUsername() {
-        return oAuth2ResponseDto.getProvider() + "_" + oAuth2ResponseDto.getProviderId();
-    }
 }
