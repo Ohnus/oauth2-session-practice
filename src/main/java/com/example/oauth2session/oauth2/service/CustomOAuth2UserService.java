@@ -36,8 +36,10 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         // 제공자별로 분기하여 각 dto에 속성 넘겨주기
         OAuth2ResponseDto oAuth2ResponseDto = null;
         if (provider.equals("naver")) {
+            System.out.println("naver");
             oAuth2ResponseDto = new NaverResponseDto(oAuth2User.getAttributes());
         } else if (provider.equals("google")) {
+            System.out.println("google");
             oAuth2ResponseDto = new GoogleResponseDto(oAuth2User.getAttributes());
         } else {
             return null;
