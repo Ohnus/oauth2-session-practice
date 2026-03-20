@@ -6,6 +6,7 @@ import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
 import org.springframework.stereotype.Component;
 
+// 제공자의 서버와 연결할 변수 설정 클래스
 @Component
 public class SocialClientRegistration {
 

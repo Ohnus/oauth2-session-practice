@@ -29,10 +29,12 @@ public class CustomOAuth2User implements OAuth2User {
         );
     }
 
-    // 사용자의 이름 또는 별명
+    // 사용자의 고유 식별 값
+    // oauth2_authorized_client 테이블에 principal_name 컬럼은 아래 메서드 호출로 결정된다.
     @Override
     public String getName() {
-        return oAuth2ResponseDto.getName();
+        return oAuth2ResponseDto.getProvider() + "_" + oAuth2ResponseDto.getProviderId();
+        // return oAuth2ResponseDto.getProviderId();
     }
 
 }
